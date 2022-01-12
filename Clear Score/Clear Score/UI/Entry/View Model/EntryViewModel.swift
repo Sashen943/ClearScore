@@ -11,8 +11,10 @@ class EntryViewModel {
     
     // MARK: Localised String(s)
     
-    private let title = "Get started"
+    private let title = "Clear score"
     private let checkCreditScoreButtonTitle = "Check credit score"
+    private let welcomeMessage = "Hi there ✌️\nLet's get you started"
+    private let logoImageName = "clear_score_logo"
     
     // MARK: Dependencies
     
@@ -28,6 +30,8 @@ class EntryViewModel {
     
     func viewDidLoad() {
         self.view?.configureTitle(title)
+        self.view?.configureWelcomeLabel(welcomeMessage)
+        self.view?.configureLogoImageView(logoImageName)
         self.view?.configureCheckCreditButton(checkCreditScoreButtonTitle,
                                               #selector(self.checkCreditScoreButtonTapped),
                                               self)

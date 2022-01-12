@@ -1,0 +1,14 @@
+target 'Clear Score' do
+ 
+  use_frameworks!
+
+  pod 'Alamofire', '~> 5.5'
+
+  target 'Clear ScoreTests' do
+    inherit! :search_paths
+  end
+
+  target 'Clear ScoreUITests' do
+  end
+
+end

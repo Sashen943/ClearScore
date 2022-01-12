@@ -8,13 +8,41 @@
 import UIKit
 
 class LoadingIndicatorView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    // MARK: IBOutlet(s)
+    
+    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    // MARK: Constructor(s)
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.initialiseView()
     }
-    */
-
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.initialiseView()
+    }
+    
+    // MARK: Method(s)
+    
+    private func initialiseView() {
+        Bundle.main.loadNibNamed("LoadingIndicatorView",
+                                 owner: self,
+                                 options: nil)
+        self.addSubview(contentView)
+        self.contentView.frame = self.bounds
+        self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
+    
+    public func startLoadingIndicator() {
+        self.activityIndicator.startAnimating()
+    }
+    
+    public func stopLoadingIndicator() {
+        self.activityIndicator.stopAnimating()
+    }
+    
 }

@@ -7,23 +7,81 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController {
-
+class DashboardViewController: BaseViewController {
+    
+    // MARK: Attribute(s)
+    
+    
+    // MARK: Dependencies
+    
+    private let repository = DashboardRepositoryImplementation(CreditScoreServiceImplementation())
+    private lazy var viewModel = DashboardViewModel(self, repository)
+    
+    // MARK: IBOutlet(s)
+    
+    @IBOutlet weak var headingLabel: UILabel!
+    @IBOutlet weak var doughnutView: CreditScoreDoughnut!
+    @IBOutlet weak var hintLabel: UILabel!
+    
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.viewModel.viewDidLoad()
+        self.viewModel.fetchCreditScoreData()
     }
+    
+}
 
+// MARK: DashboardView Extension
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension DashboardViewController: DashboardView {
+    
+    func configureTitle(_ title: String) {
+        self.setTitle(title)
     }
-    */
+    
+    func configureHeading(_ title: String)  {
+        self.headingLabel.text = title
+    }
+    
+    func configureCreditScoreSection(_ score: Int,
+                                     _ maxScore: Int,
+                                     _ minScore: Int) {
+        self.doughnutView.delegate = self
+        self.doughnutView.setValues(score, maxScore)
+    }
+    
+    func showLoadingIndicator() {
+        self.showActivityIndicator()
+    }
+    
+    func hideLoadingIndicator() {
+        self.hideActivityIndiactor()
+    }
+    
+    func showError(_ title: String,
+                   _ subtitle: String,
+                   _ buttonTitle: String,
+                   _ action: Selector,
+                   _ target: Any) {
+        self.showErrorView(title,
+                           subtitle,
+                           buttonTitle,
+                           action,
+                           target)
+    }
+    
+    func configureHintLabel(_ title: String) {
+        self.hintLabel.text = title
+    }
+    
+}
 
+// MARK: DoughnutViewDelegate extension
+
+extension DashboardViewController: DoughnutViewDelegate {
+    func doughnutTapped() {
+        print("Tapped view")
+    }
 }

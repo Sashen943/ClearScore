@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol CreditScoreService {
+    func fetchCreditScore(completionHandler: @escaping (Result<CreditScoreResponse, Error>) -> Void)
+}

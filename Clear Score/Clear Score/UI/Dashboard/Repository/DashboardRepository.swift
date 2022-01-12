@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol DashboardRepository {
+    func fetchCreditScore(completionHandler: @escaping (Result<CreditScoreResponse, Error>) -> Void)
+}

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol DoughnutViewDelegate {
+    func doughnutTapped()
+}

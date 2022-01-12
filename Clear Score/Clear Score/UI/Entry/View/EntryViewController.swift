@@ -15,6 +15,8 @@ class EntryViewController: BaseViewController {
     
     // MARK: IBOutlet(s)
     
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var checkCreditScoreButton: UIButton!
     
     // MARK: Lifecycle
@@ -32,6 +34,15 @@ extension EntryViewController: EntryView {
     
     func configureTitle(_ title: String) {
         self.setTitle(title)
+    }
+    
+    func configureWelcomeLabel(_ title: String) {
+        self.welcomeLabel.text = title
+    }
+    
+    func configureLogoImageView(_ imageName: String) {
+        let image = UIImage(named: imageName)
+        self.logoImageView.image = image
     }
     
     func configureCheckCreditButton(_ title: String, _ action: Selector, _ target: Any) {

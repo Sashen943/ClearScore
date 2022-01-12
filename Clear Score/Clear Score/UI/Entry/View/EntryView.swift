@@ -9,6 +9,8 @@ import Foundation
 
 protocol EntryView: AnyObject {
     func configureTitle(_ title: String)
+    func configureWelcomeLabel(_ title: String)
+    func configureLogoImageView(_ imageName: String)
     func configureCheckCreditButton(_ title: String, _ action: Selector, _ target: Any)
     func navigateToDashboard()
 }

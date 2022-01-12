@@ -8,28 +8,103 @@
 import XCTest
 
 class EntryViewModelTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    private var systemUnderTest: EntryViewModel?
+    private var mockedView = MockedEntryView()
+    
+    override  func setUp() {
+        systemUnderTest = EntryViewModel(mockedView)
+        AsynchronousProvider.setAsyncRunner(DummyAsynchronousRunner())
+        super.setUp()
+    }
+    
+    override func tearDown() {
+        mockedView.verify()
+        systemUnderTest = nil
+        super.tearDown()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testThatWhenViewDidLoadIsCalledThatTheCorrectFunctionsAreInvoked() {
+        mockedView.expectConfigureTitle()
+        mockedView.expectConfigureWelcomeLabel()
+        mockedView.expectConfigureLogoImageView()
+        mockedView.expectConfigureCheckCreditButton()
+        
+        systemUnderTest?.viewDidLoad()
+        
+        mockedView.verify()
+    }
+    
+    func testThatWhenCheckCreditScoreButtonIsTappedThatNavigateToDashboardIsCalled() {
+        mockedView.expectNavigateToDashboard()
+        
+        systemUnderTest?.checkCreditScoreButtonTapped()
+        
+        mockedView.verify()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+}
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+class MockedEntryView: EntryView {
+    
+    var configureTitleCounter = 0
+    
+    func configureTitle(_ title: String) {
+        configureTitleCounter += 1
     }
-
+    
+    func expectConfigureTitle() {
+        configureTitleCounter -= 1
+    }
+    
+    var configureWelcomeLabelCounter = 0
+    
+    func configureWelcomeLabel(_ title: String) {
+        configureWelcomeLabelCounter += 1
+    }
+    
+    func expectConfigureWelcomeLabel() {
+        configureWelcomeLabelCounter -= 1
+    }
+    
+    var configureLogoImageCounter = 0
+    
+    func configureLogoImageView(_ imageName: String) {
+        configureLogoImageCounter += 1
+    }
+    
+    func expectConfigureLogoImageView() {
+        configureLogoImageCounter -= 1
+    }
+    
+    var configureCreditCheckButtonCounter = 0
+    
+    func configureCheckCreditButton(_ title: String, _ action: Selector, _ target: Any) {
+        configureCreditCheckButtonCounter += 1
+    }
+    
+    func expectConfigureCheckCreditButton() {
+        configureCreditCheckButtonCounter -= 1
+    }
+    
+    var navigateToDashboardCounter = 0
+    
+    func navigateToDashboard() {
+        navigateToDashboardCounter += 1
+    }
+    
+    func expectNavigateToDashboard() {
+        navigateToDashboardCounter -= 1
+    }
+    
+    func verify() {
+        XCTAssertEqual(configureTitleCounter, 0)
+        XCTAssertEqual(navigateToDashboardCounter, 0)
+        XCTAssertEqual(configureCreditCheckButtonCounter, 0)
+        XCTAssertEqual(configureLogoImageCounter, 0)
+        XCTAssertEqual(configureWelcomeLabelCounter, 0)
+        XCTAssertEqual(configureTitleCounter, 0)
+    }
+    
+    
 }
