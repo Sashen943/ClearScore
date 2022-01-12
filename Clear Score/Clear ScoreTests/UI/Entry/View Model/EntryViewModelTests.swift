@@ -1,14 +1,13 @@
 //
-//  Clear_ScoreTests.swift
+//  EntryViewModelTests.swift
 //  Clear ScoreTests
 //
-//  Created by Sashen Pillay on 2022/01/11.
+//  Created by Sashen Pillay on 2022/01/12.
 //
 
 import XCTest
-@testable import Clear_Score
 
-class Clear_ScoreTests: XCTestCase {
+class EntryViewModelTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

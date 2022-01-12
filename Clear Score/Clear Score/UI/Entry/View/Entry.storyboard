@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wGa-OO-LGx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Entry View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="EntryViewController" customModule="Clear_Score" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear_score_logo" translatesAutoresizingMaskIntoConstraints="NO" id="MnZ-UY-YYv">
+                                <rect key="frame" x="87" y="355" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="j8U-H2-tRG"/>
+                                    <constraint firstAttribute="height" constant="240" id="vpb-Mr-OgC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-cj-8it">
+                                <rect key="frame" x="107" y="790" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.22926855090000001" green="0.49936228989999998" blue="0.62746918200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Pb-J7-Pis"/>
+                                    <constraint firstAttribute="width" constant="200" id="cgb-LM-i5A"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Check credit score">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ukH-cj-8it" secondAttribute="bottom" constant="32" id="I1Q-TO-sTy"/>
+                            <constraint firstItem="ukH-cj-8it" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="NCP-MI-zpt"/>
+                            <constraint firstItem="MnZ-UY-YYv" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ieA-zC-cdK"/>
+                            <constraint firstItem="MnZ-UY-YYv" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="td1-l4-SES"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SN4-3C-rF5"/>
+                    <connections>
+                        <outlet property="checkCreditScoreButton" destination="ukH-cj-8it" id="XID-Ul-QtU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="94.419642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h14-XG-UKG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wGa-OO-LGx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CfT-Qe-UM2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="1yb-cA-qen"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MpS-IF-hmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clear_score_logo" width="400" height="400"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
