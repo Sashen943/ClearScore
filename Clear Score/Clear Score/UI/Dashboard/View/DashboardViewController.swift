@@ -82,6 +82,7 @@ extension DashboardViewController: DashboardView {
 
 extension DashboardViewController: DoughnutViewDelegate {
     func doughnutTapped() {
-        print("Tapped view")
+        let detailsViewController = DetailsViewController()
+        self.navigateToViewController(detailsViewController)
     }
 }

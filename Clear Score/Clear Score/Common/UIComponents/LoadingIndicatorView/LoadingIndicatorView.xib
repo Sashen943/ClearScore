@@ -19,13 +19,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_background" translatesAutoresizingMaskIntoConstraints="NO" id="IMP-Tp-a59">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="HQZ-1v-dcD">
                     <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching stuff..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7w-9W-qdf">
                     <rect key="frame" x="32" y="511.5" width="350" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -34,7 +38,11 @@
             <constraints>
                 <constraint firstItem="HQZ-1v-dcD" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="6yB-n5-Bcn"/>
                 <constraint firstItem="r7w-9W-qdf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="Aap-ic-sAU"/>
+                <constraint firstItem="IMP-Tp-a59" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BHs-aJ-xBE"/>
                 <constraint firstItem="r7w-9W-qdf" firstAttribute="top" secondItem="HQZ-1v-dcD" secondAttribute="bottom" constant="40" id="PHP-Yi-EqK"/>
+                <constraint firstAttribute="trailing" secondItem="IMP-Tp-a59" secondAttribute="trailing" id="XSh-6b-Eds"/>
+                <constraint firstAttribute="bottom" secondItem="IMP-Tp-a59" secondAttribute="bottom" id="XYR-D0-bdB"/>
+                <constraint firstItem="IMP-Tp-a59" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cvz-Ux-BDK"/>
                 <constraint firstItem="HQZ-1v-dcD" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="njm-rk-jX5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r7w-9W-qdf" secondAttribute="trailing" constant="32" id="qJn-Al-Dtg"/>
             </constraints>
@@ -42,6 +50,7 @@
         </view>
     </objects>
     <resources>
+        <image name="dashboard_background" width="1125" height="2436"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-cj-8it">
-                                <rect key="frame" x="107" y="518" width="200" height="40"/>
+                                <rect key="frame" x="77" y="454" width="260" height="45"/>
                                 <color key="backgroundColor" red="0.22926855090000001" green="0.49936228989999998" blue="0.62746918200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="9Pb-J7-Pis"/>
-                                    <constraint firstAttribute="width" constant="200" id="cgb-LM-i5A"/>
+                                    <constraint firstAttribute="height" constant="45" id="9Pb-J7-Pis"/>
+                                    <constraint firstAttribute="width" constant="260" id="cgb-LM-i5A"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Check credit score">
@@ -29,13 +28,13 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi there! Lets get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzy-Oq-uzc">
-                                <rect key="frame" x="32" y="424" width="350" height="30"/>
+                                <rect key="frame" x="32" y="392" width="350" height="30"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear_score_logo" translatesAutoresizingMaskIntoConstraints="NO" id="MnZ-UY-YYv">
-                                <rect key="frame" x="87" y="152" width="240" height="240"/>
+                                <rect key="frame" x="87" y="120" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="j8U-H2-tRG"/>
                                     <constraint firstAttribute="height" constant="240" id="vpb-Mr-OgC"/>
@@ -43,15 +42,15 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dzy-Oq-uzc" firstAttribute="top" secondItem="MnZ-UY-YYv" secondAttribute="bottom" constant="32" id="073-ib-GBb"/>
                             <constraint firstItem="ukH-cj-8it" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="NCP-MI-zpt"/>
                             <constraint firstItem="dzy-Oq-uzc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="Nws-ZH-kMY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dzy-Oq-uzc" secondAttribute="trailing" constant="32" id="NxS-gL-MaJ"/>
                             <constraint firstItem="MnZ-UY-YYv" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="TVb-J1-XZo"/>
-                            <constraint firstItem="MnZ-UY-YYv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="nsg-XY-veF"/>
-                            <constraint firstItem="ukH-cj-8it" firstAttribute="top" secondItem="dzy-Oq-uzc" secondAttribute="bottom" constant="64" id="ypa-iG-fmi"/>
+                            <constraint firstItem="MnZ-UY-YYv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="nsg-XY-veF"/>
+                            <constraint firstItem="ukH-cj-8it" firstAttribute="top" secondItem="dzy-Oq-uzc" secondAttribute="bottom" constant="32" id="ypa-iG-fmi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SN4-3C-rF5"/>
@@ -73,6 +72,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CfT-Qe-UM2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -86,8 +89,5 @@
     </scenes>
     <resources>
         <image name="clear_score_logo" width="400" height="400"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

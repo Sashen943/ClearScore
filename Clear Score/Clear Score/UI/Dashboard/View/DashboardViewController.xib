@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_background" translatesAutoresizingMaskIntoConstraints="NO" id="5Wq-Ng-QzL">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufh-Gn-ZDl">
                     <rect key="frame" x="32" y="108" width="318" height="0.0"/>
@@ -54,7 +54,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OtE-zF-Kqk" secondAttribute="trailing" constant="16" id="OJ6-3U-h4R"/>
                 <constraint firstItem="OtE-zF-Kqk" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Ph6-6o-b7b"/>
                 <constraint firstItem="OtE-zF-Kqk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Qll-NU-T0E"/>
-                <constraint firstItem="5Wq-Ng-QzL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UsQ-zj-9rq"/>
+                <constraint firstItem="5Wq-Ng-QzL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UsQ-zj-9rq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ufh-Gn-ZDl" secondAttribute="trailing" constant="64" id="aeQ-tJ-ahB"/>
                 <constraint firstItem="Ufh-Gn-ZDl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="hrS-Ba-SsV"/>
                 <constraint firstItem="OtE-zF-Kqk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kt1-el-sbe"/>

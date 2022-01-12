@@ -76,7 +76,7 @@ class CreditScoreDoughnut: UIView {
         AsynchronousProvider.runOnMain({
             let percentage = Double(score)/Double(max)
             self.basicAnimation.toValue = percentage
-            self.basicAnimation.duration = 3
+            self.basicAnimation.duration = 1
             self.basicAnimation.fillMode = CAMediaTimingFillMode.forwards
             self.basicAnimation.isRemovedOnCompletion = false
             self.shapeLayer.add(self.basicAnimation, forKey: "shapeLayerAnimation")

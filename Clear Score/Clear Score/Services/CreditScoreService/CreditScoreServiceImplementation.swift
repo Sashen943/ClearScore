@@ -10,7 +10,7 @@ import Alamofire
 
 class CreditScoreServiceImplementation: CreditScoreService {
     
-    // MARK: Endpoint
+    // MARK: Endpoint(s)
     
     private let endpoint = "https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com/prod/mockcredit/values"
     
