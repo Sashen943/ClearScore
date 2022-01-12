@@ -1,5 +1,9 @@
 # ClearScore
 
+## Description
+
+This application simulates a credit check on a user by making a call to an API and displaying the data.
+
 ## How to run
 
 1. Clone project
