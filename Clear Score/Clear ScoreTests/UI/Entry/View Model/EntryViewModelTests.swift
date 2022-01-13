@@ -9,8 +9,15 @@ import XCTest
 
 class EntryViewModelTests: XCTestCase {
     
+    // MARK: System under test
+    
     private var systemUnderTest: EntryViewModel?
+    
+    // MARK: Mock(s)
+    
     private var mockedView = MockedEntryView()
+    
+    // MARK: Lifecycle
     
     override  func setUp() {
         systemUnderTest = EntryViewModel(mockedView)
@@ -24,7 +31,9 @@ class EntryViewModelTests: XCTestCase {
         AsynchronousProvider.reset()
         super.tearDown()
     }
-
+    
+    // MARK: Test(s)
+    
     func testThatWhenViewDidLoadIsCalledThatTheCorrectFunctionsAreInvoked() {
         mockedView.expectConfigureTitle()
         mockedView.expectConfigureWelcomeLabel()
@@ -43,5 +52,5 @@ class EntryViewModelTests: XCTestCase {
         
         mockedView.verify()
     }
-
+    
 }

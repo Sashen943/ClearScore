@@ -8,10 +8,17 @@
 import XCTest
 
 class DetailsRepositoryTests: XCTestCase {
-
+    
+    // MARK: Mock(s)
+    
     let mockedService = MockedCreditScoreService()
+    
+    // MARK: System under test
+    
     var systemUnderTest: DetailsRepository?
-
+    
+    // MARK: Lifecycle
+    
     override func setUp() {
         systemUnderTest = DetailsRepositoryImplementation(mockedService)
         super.setUp()
@@ -22,6 +29,8 @@ class DetailsRepositoryTests: XCTestCase {
         mockedService.verify()
         super.tearDown()
     }
+    
+    // MARK: Test(s)
     
     func testThatWhenFetchCreditScoreDataSucceedsThatTheCorrectDataIsReturned() {
         mockedService.expectFetchCreditScoreData()
@@ -58,6 +67,6 @@ class DetailsRepositoryTests: XCTestCase {
         
         mockedService.verify()
     }
-
+    
 }
 

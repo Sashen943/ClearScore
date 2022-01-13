@@ -8,12 +8,15 @@
 import XCTest
 
 class DashboardRepositoryTests: XCTestCase {
-
-    // MARK: Attribute(s)
+    
+    // MARK: Mock(s)
     
     let mockedService = MockedCreditScoreService()
+    
+    // MARK: System under test
+    
     var systemUnderTest: DashboardRepository?
-
+    
     // MARK: Lifecycle
     
     override func setUp() {
@@ -26,7 +29,7 @@ class DashboardRepositoryTests: XCTestCase {
         mockedService.verify()
         super.tearDown()
     }
-
+    
     // MARK: Test(s)
     
     func testThatWhenFetchCreditScoreDataSucceedsThatTheCorrectDataIsReturned() {
@@ -64,5 +67,5 @@ class DashboardRepositoryTests: XCTestCase {
         
         mockedService.verify()
     }
-
+    
 }

@@ -77,7 +77,6 @@ class DetailsViewModel {
             self.displayLongTermDebt()
             self.displayDaysTillNextReport()
             self.view?.hideLoadingIndicator()
-
         }
     }
     

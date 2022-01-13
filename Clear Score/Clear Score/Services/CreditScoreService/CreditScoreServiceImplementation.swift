@@ -10,13 +10,9 @@ import Alamofire
 
 class CreditScoreServiceImplementation: CreditScoreService {
     
-    // MARK: Endpoint(s)
+    // MARK: Attribute(s)
     
-    private let endpoint = "https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com/prod/mockcredit/values"
-    
-    // MARK: Error(s)
-    
-    private let genericError = NSError(domain: "Unknown error", code: 0, userInfo: nil)
+    private let endpoint = Endpoints.creditScoreEndPoint
     
     // MARK: Method(s)
     
@@ -24,7 +20,7 @@ class CreditScoreServiceImplementation: CreditScoreService {
         AF.request(endpoint).responseDecodable(of: CreditScoreResponse.self) { response in
             if let error = response.error { completionHandler(.failure(error)) }
             guard let data = response.data else {
-                completionHandler(.failure(self.genericError))
+                completionHandler(.failure(Errors.genericServiceError))
                 return
             }
             do {

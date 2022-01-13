@@ -31,6 +31,9 @@
 		66556DA7278F4962008CC0A8 /* CreditReportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D1DF6E278E12830057B3E6 /* CreditReportInfo.swift */; };
 		66556DAA278F4AB5008CC0A8 /* CreditScoreResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 66556DA9278F4AB5008CC0A8 /* CreditScoreResponse.json */; };
 		66556DAD278F4B0A008CC0A8 /* SwiftTestDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66556DAC278F4B0A008CC0A8 /* SwiftTestDataGenerator.swift */; };
+		667D3F6D2790D3570014476B /* ClearScoreStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 667D3F6C2790D3570014476B /* ClearScoreStrings.strings */; };
+		667D3F702790D8060014476B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667D3F6F2790D8060014476B /* Errors.swift */; };
+		667D3F732790D8740014476B /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667D3F722790D8740014476B /* Endpoints.swift */; };
 		66D02277278F542400D744DA /* CreditScoreResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 66556DA9278F4AB5008CC0A8 /* CreditScoreResponse.json */; };
 		66D0227A278F568F00D744DA /* MockedDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D02279278F568F00D744DA /* MockedDashboardView.swift */; };
 		66D0227C278F56D200D744DA /* MockedDashboardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0227B278F56D200D744DA /* MockedDashboardRepository.swift */; };
@@ -112,6 +115,9 @@
 		66556DA3278F46BD008CC0A8 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
 		66556DA9278F4AB5008CC0A8 /* CreditScoreResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreditScoreResponse.json; sourceTree = "<group>"; };
 		66556DAC278F4B0A008CC0A8 /* SwiftTestDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestDataGenerator.swift; sourceTree = "<group>"; };
+		667D3F6C2790D3570014476B /* ClearScoreStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ClearScoreStrings.strings; sourceTree = "<group>"; };
+		667D3F6F2790D8060014476B /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		667D3F722790D8740014476B /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		66D02279278F568F00D744DA /* MockedDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedDashboardView.swift; sourceTree = "<group>"; };
 		66D0227B278F56D200D744DA /* MockedDashboardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedDashboardRepository.swift; sourceTree = "<group>"; };
 		66D0227D278F571100D744DA /* MockedEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedEntryView.swift; sourceTree = "<group>"; };
@@ -270,6 +276,30 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		667D3F6B2790D3300014476B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				667D3F6C2790D3570014476B /* ClearScoreStrings.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		667D3F6E2790D7F00014476B /* Error Handling */ = {
+			isa = PBXGroup;
+			children = (
+				667D3F6F2790D8060014476B /* Errors.swift */,
+			);
+			path = "Error Handling";
+			sourceTree = "<group>";
+		};
+		667D3F712790D8670014476B /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				667D3F722790D8740014476B /* Endpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
 		66D02278278F567E00D744DA /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +424,7 @@
 		66D1DF10278E04F70057B3E6 /* Clear Score */ = {
 			isa = PBXGroup;
 			children = (
+				667D3F6B2790D3300014476B /* Resources */,
 				66D1DF68278E11590057B3E6 /* Models */,
 				66D1DF43278E06760057B3E6 /* UI */,
 				66D1DF42278E066C0057B3E6 /* Services */,
@@ -484,6 +515,8 @@
 		66D1DF4D278E09DD0057B3E6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				667D3F712790D8670014476B /* Endpoints */,
+				667D3F6E2790D7F00014476B /* Error Handling */,
 				66D1DF77278E38F50057B3E6 /* Extensions */,
 				66D1DF76278E38DE0057B3E6 /* Multithreading */,
 			);
@@ -701,6 +734,7 @@
 				66D0229C278F605200D744DA /* CardListView.xib in Resources */,
 				66D02277278F542400D744DA /* CreditScoreResponse.json in Resources */,
 				66D1DF5E278E0F350057B3E6 /* DashboardViewController.xib in Resources */,
+				667D3F6D2790D3570014476B /* ClearScoreStrings.strings in Resources */,
 				66D0228D278F5DF700D744DA /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,11 +820,13 @@
 			files = (
 				66D1DF73278E224B0057B3E6 /* DashboardRepositoryImplementation.swift in Sources */,
 				66D1DF6F278E12830057B3E6 /* CreditReportInfo.swift in Sources */,
+				667D3F732790D8740014476B /* Endpoints.swift in Sources */,
 				66D1DF79278E39080057B3E6 /* AsynchronousProvider.swift in Sources */,
 				66556D8C278EE51D008CC0A8 /* LoadingIndicatorView.swift in Sources */,
 				66D1DF12278E04F70057B3E6 /* AppDelegate.swift in Sources */,
 				66D1DF52278E0A570057B3E6 /* EntryViewModel.swift in Sources */,
 				66D1DF4F278E09F60057B3E6 /* UIButtonExtension.swift in Sources */,
+				667D3F702790D8060014476B /* Errors.swift in Sources */,
 				66D1DF5A278E0F250057B3E6 /* DashboardView.swift in Sources */,
 				66D1DF67278E11210057B3E6 /* CreditScoreServiceImplementation.swift in Sources */,
 				66D02293278F5E2700D744DA /* DetailsRepository.swift in Sources */,
@@ -1002,6 +1038,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Clear\\ Score/Resources/ClearScoreStrings.strings";
 				DEVELOPMENT_TEAM = FTKP6RK79J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Clear Score/Info.plist";
@@ -1033,6 +1070,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Clear\\ Score/Resources/ClearScoreStrings.strings";
 				DEVELOPMENT_TEAM = FTKP6RK79J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Clear Score/Info.plist";

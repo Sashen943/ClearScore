@@ -9,6 +9,10 @@ import UIKit
 
 class ErrorView: UIView {
     
+    // MARK: Attribute(s)
+    
+    private let nibName = "ErrorView"
+    
     // MARK: IBOutlet(s)
     
     @IBOutlet var contentView: UIView!
@@ -31,9 +35,7 @@ class ErrorView: UIView {
     // MARK: Method(s)
     
     private func initialiseView() {
-        Bundle.main.loadNibNamed("ErrorView",
-                                 owner: self,
-                                 options: nil)
+        Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
         self.addSubview(contentView)
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

@@ -9,10 +9,16 @@ import XCTest
 
 class DashboardViewModelTests: XCTestCase {
     
+    // MARK: Mock(s)
+    
     private let mockedView = MockedDashboardView()
     private let mockedRepository = MockedDashboardRepository()
     
+    // MARK: System under test
+    
     var systemUnderTest: DashboardViewModel?
+    
+    // MARK: Lifecycle
     
     override func setUp() {
         systemUnderTest = DashboardViewModel(mockedView, mockedRepository)
@@ -26,6 +32,8 @@ class DashboardViewModelTests: XCTestCase {
         AsynchronousProvider.reset()
         super.tearDown()
     }
+    
+    // MARK: Test(s)
     
     func testThatWhenViewDidLoadIsCalledThatTheCorrectFunctionsAreInvoked() {
         mockedView.expectConfigureTitle()

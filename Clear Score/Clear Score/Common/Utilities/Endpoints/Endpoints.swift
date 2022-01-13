@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class Endpoints {
+    static let creditScoreEndPoint =  "https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com/prod/mockcredit/values"
+}

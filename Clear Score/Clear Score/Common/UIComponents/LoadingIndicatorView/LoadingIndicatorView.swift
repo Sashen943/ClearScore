@@ -9,6 +9,10 @@ import UIKit
 
 class LoadingIndicatorView: UIView {
     
+    // MARK: Attribute(s)
+    
+    private let nibName = "LoadingIndicatorView"
+    
     // MARK: IBOutlet(s)
     
     @IBOutlet var contentView: UIView!
@@ -29,7 +33,7 @@ class LoadingIndicatorView: UIView {
     // MARK: Method(s)
     
     private func initialiseView() {
-        Bundle.main.loadNibNamed("LoadingIndicatorView",
+        Bundle.main.loadNibNamed(nibName,
                                  owner: self,
                                  options: nil)
         self.addSubview(contentView)

@@ -13,6 +13,18 @@ class CreditScoreDoughnut: UIView {
     
     private let shapeLayer = CAShapeLayer()
     private let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+    private let nibName = "CreditScoreDoughnut"
+    private let radius: CGFloat = 100
+    private let startAngle = -CGFloat.pi / 2
+    private let endAngle = 2 * CGFloat.pi
+    private let trackLayerLineWidth: CGFloat = 15
+    private let shapeLayerLineWidth: CGFloat = 30
+    private let strokeEnd: CGFloat = 0
+    private let animationDuration: CGFloat = 1
+    private let animationKey = "shapeLayerAnimation"
+    
+    // MARK: Delegate
+    
     var delegate: DoughnutViewDelegate?
     
     // MARK: IBOutlet(s)
@@ -37,9 +49,7 @@ class CreditScoreDoughnut: UIView {
     // MARK: Method(s)
     
     private func initialiseView() {
-        Bundle.main.loadNibNamed("CreditScoreDoughnut",
-                                 owner: self,
-                                 options: nil)
+        Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
         self.addSubview(contentView)
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -54,20 +64,24 @@ class CreditScoreDoughnut: UIView {
         let center = contentView.center
         let trackLayer = CAShapeLayer()
         
-        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: center,
+                                        radius: radius,
+                                        startAngle: startAngle,
+                                        endAngle: endAngle,
+                                        clockwise: true)
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.lightGray.cgColor
-        trackLayer.lineWidth = 15
+        trackLayer.lineWidth = trackLayerLineWidth
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.lineCap = CAShapeLayerLineCap.round
         contentView.layer.addSublayer(trackLayer)
         
         shapeLayer.path = circularPath.cgPath
         shapeLayer.strokeColor = UIColor.cyan.cgColor
-        shapeLayer.lineWidth = 30
+        shapeLayer.lineWidth = shapeLayerLineWidth
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineCap = CAShapeLayerLineCap.round
-        shapeLayer.strokeEnd = 0
+        shapeLayer.strokeEnd = strokeEnd
         contentView.layer.addSublayer(shapeLayer)
         
     }
@@ -76,10 +90,10 @@ class CreditScoreDoughnut: UIView {
         AsynchronousProvider.runOnMain({
             let percentage = Double(score)/Double(max)
             self.basicAnimation.toValue = percentage
-            self.basicAnimation.duration = 1
+            self.basicAnimation.duration = self.animationDuration
             self.basicAnimation.fillMode = CAMediaTimingFillMode.forwards
             self.basicAnimation.isRemovedOnCompletion = false
-            self.shapeLayer.add(self.basicAnimation, forKey: "shapeLayerAnimation")
+            self.shapeLayer.add(self.basicAnimation, forKey: self.animationKey)
         })
     }
     

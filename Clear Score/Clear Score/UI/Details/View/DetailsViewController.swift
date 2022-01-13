@@ -26,7 +26,7 @@ class DetailsViewController: BaseViewController {
         viewModel.viewDidLoad()
         viewModel.fetchCreditScoreData()
     }
-
+    
 }
 
 // MARK: DetailsView Extension

@@ -9,10 +9,16 @@ import XCTest
 
 class DetailsViewModelTests: XCTestCase {
     
+    // MARK: Mock(s)
+    
     private let mockedView = MockedDetailsView()
     private let mockedRepository = MockedDetailsRepository()
     
+    // MARK: System under test
+    
     var systemUnderTest: DetailsViewModel?
+    
+    // MARK: Lifecycle
     
     override func setUp() {
         systemUnderTest = DetailsViewModel(mockedView, mockedRepository)
@@ -26,6 +32,8 @@ class DetailsViewModelTests: XCTestCase {
         AsynchronousProvider.reset()
         super.tearDown()
     }
+    
+    // MARK: Test(s)
     
     func testThatWhenViewDidLoadIsCalledThatTheCorrectFunctionsAreInvoked() {
         mockedView.expectConfigureTitle()

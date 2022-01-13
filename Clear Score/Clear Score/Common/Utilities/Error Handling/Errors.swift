@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class Errors {
+   static let genericServiceError = NSError(domain: "Unknown error", code: 0, userInfo: nil)
+}
