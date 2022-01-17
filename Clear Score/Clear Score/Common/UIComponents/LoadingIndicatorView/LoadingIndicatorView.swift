@@ -17,6 +17,7 @@ class LoadingIndicatorView: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadingLabel: UILabel!
     
     // MARK: Constructor(s)
     
@@ -39,6 +40,11 @@ class LoadingIndicatorView: UIView {
         self.addSubview(contentView)
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
+    
+    private func configureLoadingLabel() {
+        let message = "Loading.message".localised()
+        self.loadingLabel.text = message
     }
     
     public func startLoadingIndicator() {

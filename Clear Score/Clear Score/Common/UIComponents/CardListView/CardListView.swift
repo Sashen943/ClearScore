@@ -12,7 +12,7 @@ class CardListView: UIView {
     // MARK: Attribute(s)
     
     private let nibName = "CardListView"
-
+    
     // MARK: IBOutlet(s)
     
     @IBOutlet var contentView: UIView!

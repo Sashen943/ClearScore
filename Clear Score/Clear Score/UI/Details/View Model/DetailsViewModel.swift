@@ -11,21 +11,22 @@ class DetailsViewModel {
     
     // MARK: Localised string(s)
     
-    private let title = "Details"
-    private let errorMessage = "Something went wrong."
-    private let retryButtonTitle = "Retry"
-    private let headingLabel = "More about your credit score"
-    private let scoreTitle = "Credit score"
-    private let scoreBandTitle = "Score band"
-    private let hasEverDefaultedTitle = "Has defaulted before"
-    private let yesLabel = "Yes"
-    private let noLabel = "No"
-    private let daysTillNextReportTitle = "Days until next report"
-    private let monthsSinceLastDefaultedTitle = "Months since last default"
-    private let monthsSinceLastDelinquentTitle = "Months since last delinquent"
-    private let hasEverBeenDelinquentTitle = "Has been delinquent"
-    private let currentShortTermDebtTitle = "Short term debt"
-    private let currentLongTermDebtTitle = "Long term debt"
+    private let title = "Details.title".localised()
+    private let errorMessage = "Details.errorMessage".localised()
+    private let retryButtonTitle = "Details.retryButtonTitle".localised()
+    private let headingLabel = "Details.headingLabel".localised()
+    private let scoreTitle = "Details.scoreTitle".localised()
+    private let scoreBandTitle = "Details.scoreBandTitle".localised()
+    private let hasEverDefaultedTitle = "Details.hasEverDefaultedTitle".localised()
+    private let yesLabel = "Details.yesLabel".localised()
+    private let noLabel = "Details.noLabel".localised()
+    private let daysTillNextReportTitle = "Details.daysTillNextReportTitle".localised()
+    private let monthsSinceLastDefaultedTitle = "Details.monthsSinceLastDefaultedTitle".localised()
+    private let monthsSinceLastDelinquentTitle = "Details.monthsSinceLastDelinquentTitle".localised()
+    private let hasEverBeenDelinquentTitle = "Details.hasEverBeenDelinquentTitle".localised()
+    private let currentShortTermDebtTitle = "Details.currentShortTermDebtTitle".localised()
+    private let currentLongTermDebtTitle = "Details.currentLongTermDebtTitle".localised()
+    private let currency = "Details.currency".localised()
     
     // MARK: Dependencies
     
@@ -128,12 +129,12 @@ class DetailsViewModel {
     }
     
     private func displayShortTermDebt() {
-        let debt = "R\(self.creditScoreResponse?.creditReportInfo?.currentShortTermDebt ?? 0)"
+        let debt = "\(currency)\(self.creditScoreResponse?.creditReportInfo?.currentShortTermDebt ?? 0)"
         self.view?.addCardViewToStack(currentShortTermDebtTitle, debt)
     }
     
     private func displayLongTermDebt() {
-        let debt = "R\(self.creditScoreResponse?.creditReportInfo?.currentLongTermDebt ?? 0)"
+        let debt = "\(currency)\(self.creditScoreResponse?.creditReportInfo?.currentLongTermDebt ?? 0)"
         self.view?.addCardViewToStack(currentLongTermDebtTitle, debt)
     }
     

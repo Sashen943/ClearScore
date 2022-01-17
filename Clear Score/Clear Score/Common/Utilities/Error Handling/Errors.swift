@@ -8,5 +8,5 @@
 import Foundation
 
 class Errors {
-   static let genericServiceError = NSError(domain: "Unknown error", code: 0, userInfo: nil)
+    static let genericServiceError = NSError(domain: "Errors.domain".localised(), code: 0, userInfo: nil)
 }

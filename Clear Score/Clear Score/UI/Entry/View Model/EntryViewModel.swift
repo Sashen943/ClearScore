@@ -11,10 +11,10 @@ class EntryViewModel {
     
     // MARK: Localised String(s)
     
-    private let title = "Clear score"
-    private let checkCreditScoreButtonTitle = "Check credit score"
-    private let welcomeMessage = "Hi there ✌️\nLet's get you started"
-    private let logoImageName = "clear_score_logo"
+    private let title = "Entry.title".localised()
+    private let checkCreditScoreButtonTitle = "Entry.checkCreditScoreButtonTitle".localised()
+    private let welcomeMessage = "Entry.welcomeMessage".localised()
+    private let logoImageName = "Entry.logoImageName".localised()
     
     // MARK: Dependencies
     

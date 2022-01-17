@@ -12,6 +12,8 @@ class ErrorView: UIView {
     // MARK: Attribute(s)
     
     private let nibName = "ErrorView"
+    private let errorImageName = "ErrorView.image".localised()
+    @IBOutlet weak var errorImage: UIImageView!
     
     // MARK: IBOutlet(s)
     
@@ -39,8 +41,13 @@ class ErrorView: UIView {
         self.addSubview(contentView)
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        self.configureErrorImage()
     }
     
+    private func configureErrorImage() {
+        let image = UIImage(systemName: errorImageName)
+        self.errorImage.image = image
+    }
     
     public func showError(_ title: String, subtitle: String, retryButtonTitle: String, target: Any, action: Selector) {
         self.titleLabel.text = title

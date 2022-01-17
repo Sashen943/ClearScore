@@ -1,0 +1,49 @@
+
+// MARK: EntryViewController.swift
+
+"Entry.title" = "Clear score";
+"Entry.checkCreditScoreButtonTitle" = "Check credit score";
+"Entry.welcomeMessage" = "Hi there ✌️\nLet's get you started";
+"Entry.logoImageName" = "clear_score_logo";
+
+// MARK: DashboardViewController.swift
+
+"Dashboard.title" = "Dashboard";
+"Dashboard.errorMessage" = "Something went wrong.";
+"Dashboard.retryButtonTitle" = "Retry";
+"Dashboard.headingLabel" = "Your credit score";
+"Dashboard.hintLabel" = "Hint: Tap the doughnut 😉";
+
+// MARK: DetailsViewController.swift
+
+"Details.title" = "Details";
+"Details.errorMessage" = "Something went wrong.";
+"Details.retryButtonTitle" = "Retry";
+"Details.headingLabel" = "More about your credit score";
+"Details.scoreTitle" = "Credit score";
+"Details.scoreBandTitle" = "Score band";
+"Details.hasEverDefaultedTitle" = "Has defaulted before";
+"Details.yesLabel" = "Yes";
+"Details.noLabel" = "No";
+"Details.daysTillNextReportTitle" = "Days until next report";
+"Details.monthsSinceLastDefaultedTitle" = "Months since last default";
+"Details.monthsSinceLastDelinquentTitle" = "Months since last delinquent";
+"Details.hasEverBeenDelinquentTitle" = "Has been delinquent";
+"Details.currentShortTermDebtTitle" = "Short term debt";
+"Details.currentLongTermDebtTitle" = "Long term debt";
+"Details.currency" = "R";
+
+// MARK: LoadingIndicatorView.swift
+
+"Loading.message" = "Fetching stuff...";
+
+// MARK: ErrorView.swift
+
+"ErrorView.image" = "xmark.circle.fill";
+
+
+// MARK: Errors.swift
+
+"Errors.domain" = "Unknown error has occured";
+
+

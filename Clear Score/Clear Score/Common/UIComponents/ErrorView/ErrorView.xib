@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorView" customModule="Clear_Score" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="kYf-Sr-zzk"/>
+                <outlet property="errorImage" destination="ji7-Z1-GKz" id="2rF-to-ptC"/>
                 <outlet property="retryButton" destination="qfG-V5-tGw" id="XOm-te-x10"/>
                 <outlet property="subtitleLabel" destination="gW4-D0-lys" id="Nw3-rC-pNW"/>
                 <outlet property="titleLabel" destination="EpU-2M-jot" id="eVo-BC-X11"/>
@@ -21,8 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_background" translatesAutoresizingMaskIntoConstraints="NO" id="ROc-bt-tnj">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="JY2-de-M98">
-                    <rect key="frame" x="32" y="314" width="350" height="278"/>
+                    <rect key="frame" x="32" y="314" width="350" height="278.5"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ji7-Z1-GKz">
                             <rect key="frame" x="100" y="0.5" width="150" height="149"/>
@@ -33,38 +37,41 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EpU-2M-jot">
-                            <rect key="frame" x="154.5" y="169" width="41.5" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="153" y="169" width="44.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW4-D0-lys">
-                            <rect key="frame" x="154.5" y="208.5" width="41" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                            <rect key="frame" x="156.5" y="208.5" width="37" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfG-V5-tGw">
-                            <rect key="frame" x="160" y="248" width="30" height="30"/>
+                            <rect key="frame" x="160" y="245.5" width="30" height="33"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         </button>
                     </subviews>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="ROc-bt-tnj" secondAttribute="bottom" id="27D-up-t58"/>
                 <constraint firstItem="JY2-de-M98" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="8dc-hn-e4j"/>
+                <constraint firstItem="ROc-bt-tnj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YBH-pJ-vE2"/>
+                <constraint firstItem="ROc-bt-tnj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="h2K-mj-FxC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JY2-de-M98" secondAttribute="trailing" constant="32" id="iB1-zd-gCd"/>
+                <constraint firstAttribute="trailing" secondItem="ROc-bt-tnj" secondAttribute="trailing" id="tih-EU-EOa"/>
                 <constraint firstItem="JY2-de-M98" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="y2t-I2-9tc"/>
             </constraints>
             <point key="canvasLocation" x="132" y="94"/>
         </view>
     </objects>
     <resources>
+        <image name="dashboard_background" width="1125" height="2436"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

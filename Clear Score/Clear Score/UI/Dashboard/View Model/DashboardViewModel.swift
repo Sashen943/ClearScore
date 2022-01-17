@@ -11,11 +11,11 @@ class DashboardViewModel {
     
     // MARK: Localised string(s)
     
-    private let title = "Dashboard"
-    private let errorMessage = "Something went wrong."
-    private let retryButtonTitle = "Retry"
-    private let headingLabel = "Your credit score"
-    private let hintLabel = "Hint: Tap the doughnut 😉"
+    private let title = "Dashboard.title".localised()
+    private let errorMessage = "Dashboard.errorMessage".localised()
+    private let retryButtonTitle = "Dashboard.retryButtonTitle".localised()
+    private let headingLabel = "Dashboard.headingLabel".localised()
+    private let hintLabel = "Dashboard.hintLabel".localised()
     
     // MARK: Dependencies
     
